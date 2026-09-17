@@ -1,0 +1,30 @@
+# Secrets and local environment
+.env
+.env.*
+*.pem
+*.key
+credentials*
+secrets*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+*~
+
+# Temporary and generated files
+tmp/
+temp/
+*.log
+
+# Raw or sensitive research data should be reviewed before tracking
+data/raw/
+research/**/raw/
+
