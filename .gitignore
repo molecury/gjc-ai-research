@@ -28,3 +28,5 @@ temp/
 data/raw/
 research/**/raw/
 
+# GJC workflow state and internal artifacts
+.gjc/
