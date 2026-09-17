@@ -1,12 +1,16 @@
-# AI-Assisted Research Log
+# GJC AI Research
 
-GJC, Codex, Deep Research를 이용한 연구 과정을 재현 가능한 형태로 기록하기 위한 저장소 템플릿입니다.
+GJC, Codex, Deep Research를 이용한 연구 과정과 결과를 재현 가능한 형태로 기록하는 저장소입니다.
 
 핵심은 AI와 나눈 대화를 전부 보관하는 것이 아니라 다음 흐름을 남기는 것입니다.
 
 > 연구 질문 → 가설 → 탐색 방법 → 근거 → 반대 근거 → 판단 → 다음 단계
 
-## 시작하기
+## 기존 연구 결과
+
+- [Human CD73 (NT5E) drug landscape](cd73-research-report.md)
+
+## 연구 기록 시작하기
 
 1. `research/_template/` 디렉터리를 복사해 날짜와 주제에 맞게 이름을 바꿉니다.
 2. 연구를 시작하기 전에 `query.md`를 작성합니다.
@@ -14,8 +18,6 @@ GJC, Codex, Deep Research를 이용한 연구 과정을 재현 가능한 형태�
 4. 세션을 마칠 때 `decisions.md`와 세션 `README.md`를 완성합니다.
 5. 코드, 표, 그림 같은 결과물은 해당 세션의 `artifacts/`에 둡니다.
 6. 검토가 끝난 단위마다 Git 커밋을 만듭니다.
-
-예시:
 
 ```bash
 cp -r research/_template research/2026-09-17-cd73-literature-review
@@ -26,10 +28,11 @@ git commit -m "research: document CD73 literature review"
 ## 디렉터리 구성
 
 ```text
-research-log-template/
+gjc-ai-research/
 ├── README.md                  # 저장소의 목적, 원칙, 전체 사용법
 ├── GIT_GITHUB_SETUP.md        # Git 설치부터 GitHub 연결까지의 절차
 ├── RESEARCH_LOG.md            # 모든 연구 세션을 시간순으로 요약한 색인
+├── cd73-research-report.md    # 기존 CD73 연구 보고서
 ├── .gitignore                 # 비밀정보, 대용량 및 임시 파일 제외 규칙
 ├── research/
 │   └── _template/
@@ -63,7 +66,7 @@ research-log-template/
 - AI가 생성한 주장은 원문을 확인하기 전까지 잠정적인 것으로 취급합니다.
 - AI가 수행한 일과 연구자가 검증·결정한 일을 구분합니다.
 - 모델 이름, 도구 버전, 조사 날짜를 가능한 범위에서 기록합니다.
-- 프롬프트에 토큰, 비밀번호, 개인 정보, 비공개 원문을 넣거나 커밋하지 않습니다.
+- 토큰, 비밀번호, 개인 정보, 비공개 원문을 커밋하지 않습니다.
 - 논문 전문과 라이선스가 불분명한 자료 대신 서지정보, 요약, 링크를 기록합니다.
 - 결과가 나오지 않은 검색과 기각한 가설도 간단히 남깁니다.
 
@@ -77,4 +80,3 @@ evidence: document conflicting evidence for A
 decision: reject hypothesis B
 research: summarize deep-research session
 ```
-
